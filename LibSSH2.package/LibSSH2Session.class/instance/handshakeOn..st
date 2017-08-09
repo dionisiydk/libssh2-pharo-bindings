@@ -1,4 +1,4 @@
-controlling
+API
 handshakeOn: aSocket
 	| osHandle errorCode |
 	osHandle := aSocket osSocketHandle.
