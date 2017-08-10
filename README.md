@@ -1,2 +1,1 @@
-# LibSSH2Binding
-Pharo binding to libssh2 library
+# Pharo bindings to libssh2 library
