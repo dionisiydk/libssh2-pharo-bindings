@@ -1,5 +1,12 @@
 # Pharo bindings to libssh2 library
 
+## Installation 
+```Smalltalk
+Metacello new
+  baseline: 'LibSSH2';
+  repository: 'github://dionisiydk/libssh2-pharo-bindings';
+  load.
+```
 ## Create SSH session
 First you should establish normal TCP connection to ssh server:
 ```Smalltalk
