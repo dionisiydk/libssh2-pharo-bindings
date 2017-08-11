@@ -7,6 +7,9 @@ Metacello new
   repository: 'github://dionisiydk/libssh2-pharo-bindings';
   load.
 ```
+Notice currently bindings are in very raw state. There are many issues.
+
+So it is more prove of concept right now. 
 ## Create SSH session
 First you should establish normal TCP connection to ssh server:
 ```Smalltalk
