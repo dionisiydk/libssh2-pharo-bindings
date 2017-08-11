@@ -32,14 +32,14 @@ channel readInputData.
 ```
 ## Establish direct SSH tunnel to remote server
 SSH tunnel gives you secure communication between your program and server.
-Imaging that server 169.254.0.2 running some service on port 8080. Following script will write data to it using secure SSH channel:
+Imaging that server 169.254.0.2 running some service on port 8080. Following script will send data to it using secure SSH channel:
 ```Smalltalk
 channel := session openDirectTunnelTo: '169.254.0.2' port: 8080.
 channel writeOutputData: 'hello', String crlf.
 ```
 ## Issues
 Main issue now is strange -39 error on IO operations with opened channels.
-When you will play with scripts you will see that only second created channel is working (command channel or tunnel channel are not matter).
+When you will play with scripts you will see that only second created channel is working (command channel or tunnel channel, no matter).
 In ssh2 docs "-39" is defined as LIBSSH2_ERROR_BAD_USE. But I not found actual reason for such behaviour.
 
 ## Cleaning resources
