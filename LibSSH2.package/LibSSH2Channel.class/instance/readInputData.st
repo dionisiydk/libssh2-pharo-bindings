@@ -7,6 +7,6 @@ readInputData
 		readSize := self 
 			primReadDataFrom: 0 "standard I/O substream"
 			into: buffer size: buffer size.
-		s nextPutAll: (buffer first: readSize) asString.
-		readSize > 0] whileTrue
+		readSize > 0] whileTrue: [ s nextPutAll: (buffer first: readSize) asString ].
+		readSize < 0 ifTrue: [self error: 'Data write failed with ', readSize asString ]
 	]
