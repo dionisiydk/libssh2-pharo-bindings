@@ -26,7 +26,19 @@ session := lib newSession.
 session handshakeOn: socket.
 session authenticate: 'login' password: 'password'.
 ```
-Other auth methods will be supported in future. 
+Other auth methods is also supported:
+- agent based authentication:
+```Smalltalk
+session authenticateWithAgent: 'login'.
+```
+- authentication with private and public keys:
+```Smalltalk
+session 
+   authenticate: 'git' 
+   publicKeyFrom: FileLocator home / '.ssh/rsa.pub' 
+   privateKeyFrom: FileLocator home / '.ssh/rsa'
+   password: '***'.
+```
 You can also check server fingerprint and supported auth methods:
 ```Smalltalk
 session fingerprint. 
