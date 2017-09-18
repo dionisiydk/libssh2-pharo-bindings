@@ -1,5 +1,5 @@
 API
-authenticate: userName publicKeyFrom: publicKeyFile privateKeyFrom: privateKeyFile password: privateKeyPassword
+authenticate: userName withPublicKeyFrom: publicKeyFile privateKeyFrom: privateKeyFile password: privateKeyPassword
 	| errorCode |
 	[errorCode := self 
 			primUserAuth: userName size: userName size 
