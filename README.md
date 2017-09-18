@@ -34,8 +34,8 @@ session authenticateWithAgent: 'login'.
 - authentication with private and public keys:
 ```Smalltalk
 session 
-   authenticate: 'git' 
-   publicKeyFrom: FileLocator home / '.ssh/rsa.pub' 
+   authenticate: 'login' 
+   withPublicKeyFrom: FileLocator home / '.ssh/rsa.pub' 
    privateKeyFrom: FileLocator home / '.ssh/rsa'
    password: '***'.
 ```
