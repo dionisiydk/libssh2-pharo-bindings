@@ -3,9 +3,10 @@ writeOutputData: aByteArray
 	
 	| buffer writtenSize |
 	buffer := aByteArray.
+	[
 	[writtenSize := self 
 			primWriteDataInto: 0 "standard I/O substream"
-			from: buffer size: buffer size.
+			from: buffer size: buffer size] doWhileTrue: [writtenSize = -9].
 	writtenSize > 0 and: [ writtenSize < buffer size]]
 		whileTrue: [ buffer := buffer allButFirst: writtenSize ].
 	
