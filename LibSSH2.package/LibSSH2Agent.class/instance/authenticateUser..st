@@ -7,5 +7,5 @@ authenticateUser: userName
 	
 	key := self findPublicKey.
 	
-	[error := self primAuthUser: 'git' with: key] doWhileTrue: [error = -9].
+	[error := self primAuthUser: userName with: key] doWhileTrue: [error = -9].
 	error = 0 ifFalse: [ self primError: error ]
