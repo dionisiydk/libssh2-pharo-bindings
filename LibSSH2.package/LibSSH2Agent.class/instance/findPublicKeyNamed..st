@@ -6,6 +6,6 @@ findPublicKeyNamed: keyName
 	
 	key := self findPublicKey.
 	[(Path from: key printComment) basename = keyName] 
-		doWhileFalse: [ self loadNextPublicKey: key ].		
+		whileFalse: [ self loadNextPublicKey: key ].		
 
 	^key
