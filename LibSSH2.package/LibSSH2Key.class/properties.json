@@ -12,6 +12,6 @@
 		"OFFSET_NODE"
 	],
 	"instvars" : [ ],
-	"name" : "LibSSH2PublicKey",
+	"name" : "LibSSH2Key",
 	"type" : "normal"
 }
