@@ -8,6 +8,6 @@ authenticateUser: userName
 	key := self findPublicKey.
 	[
 		[error := self primAuthUser: userName with: key] doWhileTrue: [error = -9].
-		error = 0 | (error ~= -18) ifFalse: [ self primError: error ].
+		error = 0 | (error = -18) ifFalse: [ self primError: error ].
 		error = -18
 	] doWhileTrue: [ key := self loadNextPublicKey: key ]
