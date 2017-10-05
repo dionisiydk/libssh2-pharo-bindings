@@ -1,5 +1,5 @@
 private
-findPublicKey
+findFirstPublicKey
 	| error key |
 	error := self primListIdentities.
 	error = 0 ifFalse: [ self primError: error ].

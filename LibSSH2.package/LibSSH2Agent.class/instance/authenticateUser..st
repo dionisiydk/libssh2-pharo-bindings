@@ -5,7 +5,7 @@ authenticateUser: userName
 	error := self primConnect.
 	error = 0 ifFalse: [ self primError: error].
 	
-	key := self findPublicKey.
+	key := self findFirstPublicKey.
 	[
 		[error := self primAuthUser: userName with: key] doWhileTrue: [error = -9].
 		error = 0 | (error = -18) ifFalse: [ self primError: error ].
