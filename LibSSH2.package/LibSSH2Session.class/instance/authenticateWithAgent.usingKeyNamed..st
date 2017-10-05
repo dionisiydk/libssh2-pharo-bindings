@@ -1,7 +1,7 @@
 API
-authenticateWithAgent: userName usingKeyNamed: publicKeyName
+authenticateWithAgent: userName usingKeyNamed: privateKeyName
 
 	| agent |
 	agent := self primInitAuthAgent.
-	agent authenticateUser: userName usingKeyNamed: publicKeyName.
+	agent authenticateUser: userName usingKeyNamed: privateKeyName.
 	agent free

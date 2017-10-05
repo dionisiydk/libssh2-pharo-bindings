@@ -1,5 +1,5 @@
 private
-loadNextPublicKey: aKey
+loadNextKey: aKey
 	| error |
 
 	error := self primLoadIdentityInto: aKey getHandle previousKey: aKey.

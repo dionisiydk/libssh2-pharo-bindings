@@ -1,11 +1,11 @@
 private
-findPublicKeyNamed: keyName
+findKeyNamed: keyName
 	| error key |
 	error := self primListIdentities.
 	error = 0 ifFalse: [ self primError: error ].
 	
-	key := self findFirstPublicKey.
+	key := self findFirstKey.
 	[(Path from: key printComment) basename = keyName] 
-		whileFalse: [ self loadNextPublicKey: key ].		
+		whileFalse: [ self loadNextKey: key ].		
 
 	^key
