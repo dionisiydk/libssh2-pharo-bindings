@@ -1,3 +1,3 @@
 *LibSSH2
 osSocketHandle
-	^self primOsSocketHandleOf: socketHandle
+	^(socketHandle pointerAt: 9) signedLongAt: 1

@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #LibSSH2!
+self packageOrganizer ensurePackage: #LibSSH2 withTags: #()!
